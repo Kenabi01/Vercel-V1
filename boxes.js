@@ -14,7 +14,7 @@ export function createBox({ offset = 0, padding = 0, background = 'lightgray' } 
   const element = document.createElement('div');
 
   element.style.position = 'absolute';
-  element.style.top = '100px';
+  element.style.top = '0px';
   element.style.left = '0px';
   element.style.padding = `${padding}px`;
   element.style.background = background;
