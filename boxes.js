@@ -32,11 +32,8 @@ export function createBox({
   element.style.background = background;
 
   function resize() {
-    const viewportWidth = window.visualViewport?.width ?? window.innerWidth;
-    const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
-
-    element.style.width = `${viewportWidth + offset - left - right}px`;
-    element.style.height = `${viewportHeight + offset - top - bottom}px`;
+    element.style.width = `${window.innerWidth + offset - left - right}px`;
+    element.style.height = `${window.innerHeight + offset - top - bottom}px`;
   }
 
   resize();
