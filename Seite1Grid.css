@@ -1,0 +1,21 @@
+/* Seite1Grid - dynamic CSS grid layout
+   Debug styling enabled: orange background and dashed border
+   Use CSS variables to adjust margins and padding as needed. */
+
+.seite1-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--seite1-grid-gap, 1rem);
+
+  /* Adjustable margins on all sides */
+  margin-top: var(--seite1-grid-margin-top, 0);
+  margin-right: var(--seite1-grid-margin-right, 0);
+  margin-bottom: var(--seite1-grid-margin-bottom, 0);
+  margin-left: var(--seite1-grid-margin-left, 0);
+
+  /* Padding inside the grid */
+  padding: var(--seite1-grid-padding, 1rem);
+
+  background-color: orange;
+  border: 1px dashed #000; /* Debug border */
+}
