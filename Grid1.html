@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Grid1</title>
+    <style>
+      html, body {
+        overflow: hidden;
+        margin: 0;
+        overscroll-behavior: none;
+        scrollbar-width: none; /* Firefox */
+        /* Allow the grid background to stretch to the full dynamic
+           viewport height on mobile without being constrained by browser UI. */
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+        min-height: 100lvh;
+      }
+
+      html::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+      }
+
+      .grid1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        /* Combine custom spacing with safe-area insets so the purple
+           background always covers the full device viewport. */
+        padding:
+          calc(env(safe-area-inset-top) + 1rem)
+          calc(env(safe-area-inset-right) + 1rem)
+          calc(env(safe-area-inset-bottom) + 1rem)
+          calc(env(safe-area-inset-left) + 1rem);
+        width: 100%;
+        /* Use dynamic viewport units and fallbacks so the grid spans the
+           full available height across browsers without being cut off by
+           notches or browser chrome. */
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+        min-height: 100lvh;
+        box-sizing: border-box;
+
+        /* Debug styles */
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid1"></div>
+  </body>
+</html>
