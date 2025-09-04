@@ -9,10 +9,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
-  width: calc(100vw - var(--spacing-left) - var(--spacing-right));
-  height: calc(100vh - var(--spacing-top) - var(--spacing-bottom));
+  margin: 0;
+  /* Allow internal spacing while letting the grid span the full screen */
+  padding: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
   box-sizing: border-box;
+  width: 100vw;
+  /* Use dynamic viewport height to avoid gaps on mobile browsers */
+  height: 100vh;
+  height: 100dvh;
 
   /* Debug styles */
   background-color: orange;
