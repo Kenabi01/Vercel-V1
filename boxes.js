@@ -18,22 +18,22 @@ export function createBox({
   offset = 0,
   padding = 0,
   background = 'lightgray',
-  top = 10,
-  right = 10,
-  bottom = 10,
-  left = 10,
+  top = 0,
+  right = 0,
+  bottom = 0,
+  left = 0,
 } = {}) {
   const element = document.createElement('div');
 
   element.style.position = 'absolute';
-  element.style.top = `${top}px`;
   element.style.left = `${left}px`;
   element.style.padding = `${padding}px`;
   element.style.background = background;
 
   function resize() {
-    element.style.width = `${window.innerWidth + offset - left - right}px`;
-    element.style.height = `${window.innerHeight + offset - top - bottom}px`;
+    element.style.top = `calc(${top}px - env(safe-area-inset-top))`;
+    element.style.width = `calc(100vw + ${offset}px - ${left + right}px)`;
+    element.style.height = `calc(100vh + env(safe-area-inset-top) + env(safe-area-inset-bottom) + ${offset}px - ${top + bottom}px)`;
   }
 
   resize();
