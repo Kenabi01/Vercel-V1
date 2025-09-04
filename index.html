@@ -8,8 +8,7 @@
     <style>
     html, body {
       overflow: hidden;
-      height: 100vh;
-      height: 100dvh;
+      height: var(--app-height, 100vh);
       margin: 0;
       overscroll-behavior: none;
       scrollbar-width: none; /* Firefox */
@@ -34,6 +33,13 @@
       <h1>Welcome to Vercel V1</h1>
       <p>Your basic Vercel project is set up!</p>
     </div>
+    <script>
+      const setAppHeight = () => {
+        document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+      };
+      window.addEventListener('resize', setAppHeight);
+      setAppHeight();
+    </script>
   </body>
 </html>
 
