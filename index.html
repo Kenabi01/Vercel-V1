@@ -6,17 +6,15 @@
   <title>Vercel V1</title>
   <style>
     html, body {
+      box-sizing: border-box;
       overflow: hidden;
       height: 100%;
       margin: 0;
-      overscroll-behavior: none;
     }
 
     body {
       font-family: sans-serif;
       padding: 2rem;
-      position: fixed;
-      width: 100%;
     }
     h1 { color: #333; }
   </style>
@@ -24,16 +22,5 @@
 <body>
   <h1>Welcome to Vercel V1</h1>
   <p>Your basic Vercel project is set up!</p>
-  <script>
-    const preventScroll = (e) => e.preventDefault();
-    window.addEventListener('wheel', preventScroll, { passive: false });
-    window.addEventListener('touchmove', preventScroll, { passive: false });
-    window.addEventListener('keydown', (e) => {
-      const keys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', 'Space'];
-      if (keys.includes(e.key)) {
-        e.preventDefault();
-      }
-    });
-  </script>
 </body>
 </html>
