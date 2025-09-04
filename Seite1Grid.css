@@ -10,6 +10,9 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
+  width: calc(100vw - var(--spacing-left) - var(--spacing-right));
+  height: calc(100vh - var(--spacing-top) - var(--spacing-bottom));
+  box-sizing: border-box;
 
   /* Debug styles */
   background-color: orange;
