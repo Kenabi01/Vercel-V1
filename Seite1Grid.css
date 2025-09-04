@@ -1,3 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-block-size: 100%;
+}
+
+body {
+  /* Push content away from notch and bottom bar */
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+}
+
 /* Dynamic grid container with adjustable spacing */
 .seite1-grid {
   /* Spacing variables for each side */
@@ -9,16 +24,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  padding:
-    calc(var(--spacing-top) + env(safe-area-inset-top))
-    calc(var(--spacing-right) + env(safe-area-inset-right))
-    calc(var(--spacing-bottom) + env(safe-area-inset-bottom))
-    calc(var(--spacing-left) + env(safe-area-inset-left));
+  padding: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
   inline-size: 100svw;
   /* Use dynamic viewport height to avoid gaps on mobile browsers */
-  block-size: 100vh;     /* fallback */
-  block-size: 100svh;    /* avoid URL-bar overlap */
-  block-size: 100dvh;    /* dynamic when bars collapse */
+  min-block-size: 100vh;   /* fallback */
+  min-block-size: 100svh;  /* avoid URL-bar overlap */
+  min-block-size: 100dvh;  /* dynamic when bars collapse */
   box-sizing: border-box;
 
   /* Debug styles */
