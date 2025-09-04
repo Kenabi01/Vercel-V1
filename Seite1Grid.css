@@ -1,0 +1,16 @@
+/* Dynamic grid container with adjustable spacing */
+.seite1-grid {
+  /* Spacing variables for each side */
+  --spacing-top: 1rem;
+  --spacing-right: 1rem;
+  --spacing-bottom: 1rem;
+  --spacing-left: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
+
+  /* Debug styles */
+  background-color: orange;
+}
