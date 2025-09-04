@@ -9,11 +9,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
-  width: calc(100vw - var(--spacing-left) - var(--spacing-right));
+  padding: calc(var(--spacing-top) + env(safe-area-inset-top))
+           calc(var(--spacing-right) + env(safe-area-inset-right))
+           calc(var(--spacing-bottom) + env(safe-area-inset-bottom))
+           calc(var(--spacing-left) + env(safe-area-inset-left));
+  width: 100vw;
   /* Use dynamic viewport height to avoid gaps on mobile browsers */
-  height: calc(100vh - var(--spacing-top) - var(--spacing-bottom));
-  height: calc(100dvh - var(--spacing-top) - var(--spacing-bottom));
+  height: 100vh;
+  height: 100dvh;
   box-sizing: border-box;
 
   /* Debug styles */
