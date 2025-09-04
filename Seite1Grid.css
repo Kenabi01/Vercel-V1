@@ -10,10 +10,12 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   width: calc(100vw - var(--spacing-left) - var(--spacing-right));
-  /* Use dynamic viewport height to avoid gaps on mobile browsers */
-  height: calc(100vh - var(--spacing-top) - var(--spacing-bottom));
+  /* Use dynamic viewport units to avoid gaps on mobile browsers */
+  height: calc(100svh - var(--spacing-top) - var(--spacing-bottom));
   height: calc(100dvh - var(--spacing-top) - var(--spacing-bottom));
+  height: calc(100lvh - var(--spacing-top) - var(--spacing-bottom));
   box-sizing: border-box;
 
   /* Debug styles */
