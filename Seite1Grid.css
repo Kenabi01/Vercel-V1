@@ -9,21 +9,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  /* Combine custom spacing with safe-area insets so the orange
-     background always covers the full device viewport. */
-  padding:
-    calc(env(safe-area-inset-top) + var(--spacing-top))
-    calc(env(safe-area-inset-right) + var(--spacing-right))
-    calc(env(safe-area-inset-bottom) + var(--spacing-bottom))
-    calc(env(safe-area-inset-left) + var(--spacing-left));
-  width: 100%;
-  /* Use dynamic viewport units and fallbacks so the grid spans the
-     full available height across browsers without being cut off by
-     notches or browser chrome. */
-  min-height: 100vh;
-  min-height: 100svh;
-  min-height: 100dvh;
-  min-height: 100lvh;
+  margin: var(--spacing-top) var(--spacing-right) var(--spacing-bottom) var(--spacing-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  width: calc(100vw - var(--spacing-left) - var(--spacing-right));
+  /* Use dynamic viewport units to avoid gaps on mobile browsers */
+  height: calc(100svh - var(--spacing-top) - var(--spacing-bottom));
+  height: calc(100dvh - var(--spacing-top) - var(--spacing-bottom));
+  height: calc(100lvh - var(--spacing-top) - var(--spacing-bottom));
   box-sizing: border-box;
 
   /* Debug styles */
