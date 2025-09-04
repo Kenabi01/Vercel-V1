@@ -36,7 +36,7 @@ export function createBox({ offset = 0, padding = 0, background = 'lightgray' } 
  * Creates a box that occupies the full screen with an offset of -50.
  */
 export function initBoxes() {
-  const fullScreen = createBox({ offset: -50, padding: 10, background: 'rgba(255,0,0,0.3)' });
+  const fullScreen = createBox({ offset: 0, padding: 100, background: 'rgba(255,0,0,0.3)' });
   document.body.appendChild(fullScreen);
 }
 
