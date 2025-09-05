@@ -7,8 +7,8 @@
   background-color: rgba(0, 123, 255, 0.9); /* bright color overlay */
   z-index: 9999;
   /* Account for notches and safe areas on mobile devices and allow custom spacing */
-  padding: calc(var(--box1-padding-top, 0px) + env(safe-area-inset-top))
-           calc(var(--box1-padding-right, 0px) + env(safe-area-inset-right))
-           calc(var(--box1-padding-bottom, 0px) + env(safe-area-inset-bottom))
-           calc(var(--box1-padding-left, 0px) + env(safe-area-inset-left));
+  padding: calc(var(--box1-padding-top, 10px) + env(safe-area-inset-top))
+           calc(var(--box1-padding-right, 10px) + env(safe-area-inset-right))
+           calc(var(--box1-padding-bottom, 10px) + env(safe-area-inset-bottom))
+           calc(var(--box1-padding-left, 10px) + env(safe-area-inset-left));
 }
