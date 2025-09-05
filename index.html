@@ -4,25 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Vercel V1</title>
-    <link rel="stylesheet" href="placement.css" />
-    <link rel="stylesheet" href="Scroll1.css" />
-    <link rel="stylesheet" href="Scroll2.css" />
-    <link rel="stylesheet" href="Scroll3.css" />
-    <link rel="stylesheet" href="Scroll4.css" />
+    <style>
+    html, body {
+      overflow: hidden;
+      margin: 0;
+      overscroll-behavior: none;
+      scrollbar-width: none; /* Firefox */
+      /* Allow the page and grid background to stretch to the full
+         dynamic viewport height on mobile without being constrained by
+         browser UI. */
+      min-height: 100vh;
+      min-height: 100svh;
+      min-height: 100dvh;
+      min-height: 100lvh;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+
+      body {
+        position: fixed;
+        width: 100%;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+        background-image:
+          radial-gradient(circle at 20px 20px, rgba(0, 0, 0, 0.1) 8px, transparent 9px),
+          radial-gradient(circle at 60px 60px, rgba(0, 0, 0, 0.1) 8px, transparent 9px);
+        background-size: 80px 80px;
+      }
+      h1 { color: #333; }
+    </style>
   </head>
   <body>
-    <div id="scrollContainer">
-      <div class="Scroll1MainBox" id="box1"></div>
-      <div class="Scroll2MainBox" id="box2"></div>
-      <div class="Scroll3MainBox" id="box3"></div>
-      <div class="Scroll4MainBox" id="box4"></div>
+    <div>
+      <h1>Welcome to Vercel V1</h1>
+      <p>Your basic Vercel project is set up!</p>
     </div>
-    <div id="buttons">
-      <button data-target="box1">1</button>
-      <button data-target="box2">2</button>
-      <button data-target="box3">3</button>
-      <button data-target="box4">4</button>
-    </div>
-    <script src="buttons.js"></script>
   </body>
 </html>
