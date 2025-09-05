@@ -1,0 +1,9 @@
+.Scroll2MainBox {
+  width: 100vw;
+  height: 100vh;
+  background-color: #77dd77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100vw;
+}
