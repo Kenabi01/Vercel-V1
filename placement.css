@@ -2,14 +2,15 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 #scroll-container {
   display: flex;
   height: 100vh;
   width: 100vw;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
