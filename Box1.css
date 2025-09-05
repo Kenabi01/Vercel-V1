@@ -1,0 +1,11 @@
+.box1 {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height to cover mobile browser UI */
+  background-color: rgba(0, 123, 255, 0.9); /* bright color overlay */
+  z-index: 9999;
+  /* Account for notches and safe areas on mobile devices */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
