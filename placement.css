@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#scrollContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+#scrollContainer > div {
+  flex: 0 0 100vw;
+  height: 100vh;
+}
+
+#buttons {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+#buttons button {
+  margin: 0 5px;
+}
