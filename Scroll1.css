@@ -1,0 +1,6 @@
+.Scroll1MainBox {
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  background-color: #ff9999;
+}
