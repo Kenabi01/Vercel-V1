@@ -1,0 +1,9 @@
+.Scroll3MainBox {
+  width: 100vw;
+  height: 100vh;
+  background-color: #aec6cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100vw;
+}
