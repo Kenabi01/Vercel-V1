@@ -1,11 +1,14 @@
 .box1 {
   position: fixed;
-  top: 10px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 123, 255, 0.9); /* bright color overlay */
   z-index: 9999;
   /* Account for notches and safe areas on mobile devices */
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: calc(env(safe-area-inset-top) + 10px)
+           calc(env(safe-area-inset-right) + 10px)
+           calc(env(safe-area-inset-bottom) + 10px)
+           calc(env(safe-area-inset-left) + 10px);
 }
