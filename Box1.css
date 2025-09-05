@@ -1,11 +1,12 @@
 .box1 {
   position: fixed;
-  top: calc(env(safe-area-inset-top, 10px) + 0px);
-  right: calc(env(safe-area-inset-right, 10px) + 0px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 0px);
-  left: calc(env(safe-area-inset-left, 0px) + 0px);
-  background-color: rgba(0, 123, 255, 0.9); /* bright color overlay */
+  inset: 0; /* top/right/bottom/left = 0 */
+  background-color: rgba(0, 123, 255, 0.9);
   z-index: 9999;
-  /* Account for notches and safe areas on mobile devices */
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+  /* sichere Zonen + eigener Zusatzabstand */
+  padding-top: calc(env(safe-area-inset-top) + 10px);
+  padding-right: calc(env(safe-area-inset-right) + 0px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
+  padding-left: calc(env(safe-area-inset-left) + 0px);
 }
