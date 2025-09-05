@@ -1,9 +1,13 @@
 .Scroll4MainBox {
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   background-color: #fdfd96;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 0 0 100vw;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
 }
